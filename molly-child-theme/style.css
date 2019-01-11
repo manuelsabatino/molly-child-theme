@@ -1,0 +1,228 @@
+/* 
+ Theme Name:     Molly Child theme
+ Author:         Manuel Sabatino
+ Author URI:     https://manuelsabatino.com
+ Template:       Divi
+ Version:        1
+ Description:   A Child Theme built using the elegantmarketplace.com Child theme maker
+Developed by Andrew Palmer for Elegant Marketplace www.elegantmarketplace.com Free to use and duplicate as many times as you like
+ Wordpress Version: 4.9.9
+*/ 
+
+
+/* ----------- PUT YOUR CUSTOM CSS BELOW THIS LINE -- DO NOT EDIT ABOVE THIS LINE --------------------------- */ 
+
+/* Contenitore Scroll in Homepage */
+.molly-scroll {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+}
+/* Elemento decorativo freccia */
+.molly-scroll:before {
+  content: '3';
+  display: inline-block;
+  color: #fff;
+  font-family: "ETModules";
+  font-size: 60px;
+  margin-left: -30px;
+  -webkit-animation: jump 1.5s ease 0s infinite normal ;
+ 	animation: jump 1.5s ease 0s infinite normal ;
+}
+/* Animazione della freccia Scroll */
+@keyframes jump {
+  0%{transform: translateY(0);}
+  20%{transform: translateY(0);}
+  40%{transform: translateY(-30px);}
+  50%{transform: translateY(0);}
+  60%{transform: translateY(-15px);}
+  80%{transform: translateY(0);}
+  100%{transform: translateY(0);}
+}
+
+/* Decorazioni Before e After per Tagline */
+/* Per utilizzarle usa la classe .molly-payoff su uno span o strong */
+.molly-payoff::before, .molly-payoff::after {
+  content: ' ';
+  display: inline-block !important;
+  height: 1px;
+  width: 120px;
+  background-color: #000;
+  margin: 0px 15px;
+  padding: 0px 0px;
+  vertical-align: middle;
+}
+
+/* Sezione Modal nascosta nell'header */
+.modal-section {
+  opacity: 0; /* Nascosta di default */
+  visibility:hidden;
+  position: fixed; /* Posizionamento */
+  z-index: 1; /* sopra a tutto */
+  left: 0;
+  top: 0;
+  width: 100%; /* larghezza piena */
+  height: 100%; /* altezza piena */
+  overflow: auto; /* scrolla contenuti */
+  background-color: rgb(0,0,0); /* colore fall-back */
+  background-color: rgba(0,0,0,0.4); /* Nero con opacità */
+  transition: all 300ms ease-in-out; /* Transizioni */
+  flex-direction: column; /* Flex Box direzione e allineamento */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bottone Chiudi Modal  */
+span#closeCtaBtn {
+  display: block;
+  color: #aaaaaa;
+  text-align: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: all 300ms ease-in;
+}
+/* Interazione del Bottone Chiudi Modal  */
+span#closeCtaBtn:hover,
+span#closeCtaBtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Bottone CTA nel menu */
+li.btnDesk a{
+  color: white;
+  display: inline;
+  text-align: center;
+  padding: 10px 20px !important;
+  border: 2px solid white;
+  border-radius: 40px;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  transition: all 300ms ease-in-out !important;
+}
+/* Interazioni Bottone CTA nel menu */
+li.btnDesk:hover a, li.btnDesk:active a{
+  border: 2px solid rgba(0, 0, 0, 0) !important;
+  background-color: white !important;
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+#top-menu li.btnDesk:hover a{
+  color: black !important;
+}
+
+li.btnDesk:active a, li.btnMob:active a{
+  -webkit-animation: tapMe2 300ms ease-in-out;
+  animation: tapMe2 300ms ease-in-out;
+}
+/* Animazione Bottone CTA nel menu */
+@keyframes tapMe2 {
+  0% {
+    border: 2px solid rgba(0, 222, 0, 0);
+    background-color: green;
+  }
+  50% {
+    border: 2px solid #00de00;
+    background-color: rgba(100, 222, 100, 0.9);
+  }
+  100% {
+    border: 2px solid rgba(0, 222, 0, 0);
+    background-color: green;
+  }
+}
+
+/* Abilita la sfumatura sul video background del footer */
+#footer span.et_pb_section_video_bg {
+  mix-blend-mode: overlay;
+}
+
+
+/*  Stile Blog */
+/*  CSS Hack   */
+
+#blogModule article{
+  position: relative;
+  display: inline-block;
+  padding-top: 20px;
+}
+
+#blogModule article a.entry-featured-image-url {
+  width: 50% ;
+  margin-right: 20px;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+}
+
+#blogModule article h2, #blogModule article p {
+  position: relative;
+  background-color: white;
+  margin: 0px !important;
+  padding: 10px 20px;
+  z-index: 100;
+  margin-left: 100px !important;
+  box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.3);
+}
+
+#blogModule article h2 {
+  margin-top: 80px !important;
+}
+
+#blogModule article .more-link {
+  border: 1px solid #0baeba;
+  display: inline-block !important;
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 22px;
+  z-index: 110;
+  position: absolute;
+  box-shadow: 0px 10px 20px -10px #0baeba;
+  right: 0;
+  margin-top: -20px;
+  transition: all 300ms ease-in-out;
+  line-height: 1;
+}
+
+#blogModule article .more-link:hover {
+  color: white;
+  border: 1px solid #fffff;
+  background-color: #0baeba;
+  box-shadow: 0px 10px 20px -10px #0baeba;
+  transform: scale(1.1,1.1);
+}
+
+#sidebar-blog article {
+	margin: 0px 0 20px 20px;
+	Padding: 0px;
+}
+
+#sidebar-blog a img {
+	width: 33%;
+}
+
+.widget_search input#s {
+	border-radius: 22px;
+	border: 1px solid #0baeba;
+}
+
+.widget_search input#searchsubmit {
+	border-radius: 0px 22px 22px 0px;
+	border: 1px solid #0baeba;
+	background-color: #0baeba;
+	color: white;
+	font-weight: bold;
+}
+
+#main-footer {
+	display: none;
+}
+
+@media only screen and (max-width: 981px) {
+  li.btnDesk a {
+    display: none !important;
+  }
+}
+
