@@ -2,7 +2,8 @@
 
 **********
 
-Molly Child Theme – 2018-2019 CC0 – Manuel Sabatino
+Molly Child Theme – 2018-2019 CC0 – Manuel Sabatino</br>
+<a href=“http://molly.manuelsabatino.com”>visita il demo</a>
 
 Versione 1.1
 
